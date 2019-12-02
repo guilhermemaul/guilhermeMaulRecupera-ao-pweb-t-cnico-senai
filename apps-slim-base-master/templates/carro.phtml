@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>carros</title>
+    <link rel="stylesheet" href="../background.css">
+    <link rel="shortcut icon" href="../gym.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <form action="/carros/" method="get">
+        <div class="container">
+            <div class="m-5">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="/carro/">carro</a></li>
+                        <li class="breadcrumb-item"><a href="/addcarro/">adicionar carro</a></li>
+                    </ol>
+                </nav>
+            </div>
+            <div class="text-center m-5 text-dark">
+                <h1>carro</h1>
+            </div>
+
+            <?php
+            foreach ($carros as $carro) {
+                echo '<div class="col-12 ">';
+                echo '<div class="row ">';
+               
+                echo '<h3 class="text-dark">Marca: '. $carro['marca'] . ',  </h3>';
+                
+                echo '<h3 class="text-dark"> ano: '. $carro['ano'] . ',  </h3>';
+                echo '<h3 class="text-dark"> modelo: '. $carro['modelo'] . ',  </h3>';
+                echo '<h3 class="text-dark"> dono: '. $carro['dono'] . '   </h3>';
+
+                echo '</div>';
+                
+                echo '</div>';
+            }
+            ?>
+        </div>
+        <div class="col-md-4">
+                                <a href="/limparcarro/" class="btn btn-outline-warning">limpar tabela</a>
+        </div>
+        </div>
+    </form>
+</body>
+
+</html>
