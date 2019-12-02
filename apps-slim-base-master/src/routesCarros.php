@@ -24,10 +24,6 @@ return function (App $app) {
         $resultSet = $conexao->query('SELECT * FROM carro')->fetchAll();
 
         $args['carros'] = $resultSet;
-       
-           
-      
-
 
         // Render index view
         return $container->get('renderer')->render($response, 'carro.phtml', $args);
@@ -37,7 +33,8 @@ return function (App $app) {
         $container->get('logger')->info("Slim-Skeleton '/limparcarro/' route");
 
       
-          unset($_SESSION['carro']);
+        
+         
          
 
         

@@ -29,23 +29,21 @@
             <?php
             foreach ($carros as $carro) {
                 echo '<div class="col-12 ">';
-                echo '<div class="row ">';
-               
+                echo '<div class="row ">';               
                 echo '<h3 class="text-dark">Marca: '. $carro['marca'] . ',  </h3>';
-                
                 echo '<h3 class="text-dark"> ano: '. $carro['ano'] . ',  </h3>';
                 echo '<h3 class="text-dark"> modelo: '. $carro['modelo'] . ',  </h3>';
-                echo '<h3 class="text-dark"> dono: '. $carro['dono'] . '   </h3>';
-
+                echo '</div>';       
                 echo '</div>';
-                
+                echo '<div class="col-md-4">';
+                echo    '<a href="/editar/" class="btn btn-warning">editar</a>';
                 echo '</div>';
             }
             ?>
         </div>
-        <div class="col-md-4">
-                                <a href="/limparcarro/" class="btn btn-outline-warning">limpar tabela</a>
-        </div>
+            <div class="col-md-4">
+                 <a href="/limparcarro/" class="btn btn-warning">limpar tabela</a>
+            </div>
         </div>
     </form>
 </body>

@@ -35,6 +35,9 @@ $routes($app);
 $routes = require __DIR__ . '/../src/routesCarros.php';
 $routes($app);
 
+$routes = require __DIR__ . '/../src/routesEditar.php';
+$routes($app);
+
 
 // Run app
 $app->run();

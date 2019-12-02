@@ -27,14 +27,14 @@ return function (App $app) {
         $modelo = $_POST['modelo'];
         $marca = $_POST['marca'];
         $ano = $_POST['ano'];
-        $dono = $_POST['dono'];
+       
         
        
-        $resultSet = $conexao->query ("INSERT INTO carro (modelo, marca, ano, dono) 
+        $resultSet = $conexao->query ("INSERT INTO carro (modelo, marca, ano) 
                                     VALUES ('$modelo', 
                                             '$marca', 
-                                            '$ano',
-                                            dono)");
+                                            '$ano'
+                                            )");
         return $response->withRedirect('/carro/');
     });
 };
